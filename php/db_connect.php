@@ -1,12 +1,12 @@
 <?php
 
 // variables for connection
-$localhost = "us-cdbr-east-06.cleardb.net";
-$user = "b97078e238fb66";
-$password = "9e3c8562";
-$database = "heroku_5d3cbded229dc48";
+$host = $_ENV["DB_HOST"];
+$user = $_ENV["DB_USER"];
+$password = $_ENV["DB_PASSWORD"];
+$database = $_ENV["DB_NAME"];
 
 // create a database connection instance
-$mysqli = new mysqli($localhost, $user, $password, $database);
+$mysqli = new mysqli($host, $user, $password, $database);
 
 ?>
